@@ -19,3 +19,7 @@ end
 
 arr = [5,7,3,7,8,9,4,1,7,3]
 p quicksort(arr)
+
+
+
+

@@ -1,4 +1,5 @@
-# return -1 if value is not in array
+# return "not found" if value is not in array
+# [1,2,3,4,5,6,7,8,9]
 
 def binary_search(input_array, value)
     low = 0 
@@ -13,7 +14,7 @@ def binary_search(input_array, value)
             high = mid - 1
         end 
     end 
-    return - 1 
+    return "not found"
 end 
 
 # Pseudocode 
@@ -23,6 +24,6 @@ end
 #   else if halfway value is < search value, new_array = 2nd half of array
 #   else new_array = 1st half of array 
 #   repeat 
-#   return -1 if nothing found
+#   return "not found" if value is not found
 
 # [1,2,3,4,5,6,7,8,9]
