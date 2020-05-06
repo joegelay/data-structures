@@ -33,7 +33,7 @@ class HashTable
 end 
 
     
-person_list = HashTable.new # => #<HashTable:0x00007fcc378f15c8 @table=[nil, nil, ...etc]
+person_list = HashTable.new # => #<HashTable:0x00007fcc378f15c8 @table=[nil, nil, nil, ...]
 
 person_list.calculate_hash_value("Joe") # => 7511
 person_list.calculate_hash_value("Jorge") # => 7511
@@ -46,3 +46,7 @@ person_list.store("Clifford") # => ["Clifford"]
 person_list.lookup("Joe") # => 7511
 person_list.lookup("Jorge") # => 7511
 person_list.lookup("Bernard") # => "String not found"
+
+
+
+
