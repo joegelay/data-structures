@@ -49,22 +49,18 @@ class BinaryTree
     end 
 
     def insert_node_recursive start, value
-        if start.value == value
-            return "Value already in tree"
-        elsif start.value > value
-            if start.left != nil
-                insert_node_recursive(start.left, value)
-            else 
-                start.left = Node.new(value)
-                return "Inserted node with value of #{value}"
-            end 
-        else 
-            if start.right != nil
+        if start.value < value
+            if start.right
                 insert_node_recursive(start.right, value)
             else 
                 start.right = Node.new(value)
-                return "Inserted node with value of #{value}"
             end
+        else 
+            if start.left
+                insert_node_recursive(start.left, value)
+            else 
+                start.left = Node.new(value)
+            end 
         end  
     end 
 
